@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>swiper</title>
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }  
+        .swiper-slide{
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="./lib/Swiper-3.4.2/dist/css/swiper.min.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href='photo.html?test=1'><img src="http://pic55.nipic.com/file/20141208/19462408_171130083000_2.jpg"/></a></div>
+            <div class="swiper-slide"><a href='photo.html?test=2'><img src="http://img1.imgtn.bdimg.com/it/u=2171560580,4021371399&fm=23&gp=0.jpg"></a></div>
+            <div class="swiper-slide"><a href='photo.html?test=3'><img src="http://img3.imgtn.bdimg.com/it/u=2714944387,2569159950&fm=23&gp=0.jpg"></a></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+        
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <script src="lib/Swiper-3.4.2/dist/js/swiper.min.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+      var mySwiper = new Swiper ('.swiper-container', {
+        // 轮播图的方向，也可以是vertical方向
+        direction:'horizontal',
+        
+        //播放速度
+        loop: true,
+        // 自动播放时间
+        autoplay:1000,
+        // 播放的速度
+        speed:2000,
+        
+        // 如果需要分页器，即下面的小圆点
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        
+        // 如果需要前进后退按钮
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+　　　　　
+
+　　　　　　// 这样，即使我们滑动之后， 定时器也不会被清除
+　　　　  autoplayDisableOnInteraction : false,
+        
+        // 如果需要滚动条
+        // scrollbar: '.swiper-scrollbar',
+      });
+    }        
+    </script>
+</body>
+</html>
